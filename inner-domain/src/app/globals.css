@@ -24,3 +24,125 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+.revolving-border {
+  position: relative;
+  background: #000;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.revolving-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3, #ff0000);
+  background-size: 400% 400%;
+  border-radius: 0.5rem;
+  z-index: -1;
+  animation: revolve 3s linear infinite;
+}
+
+@keyframes revolve {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.revolving-border-red {
+  position: relative;
+  border-radius: 1rem;
+  z-index: 1;
+}
+
+.revolving-border-red::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(45deg, #ff0000, #ff4444, #ff0000, #aa0000, #ff0000);
+  background-size: 400% 400%;
+  border-radius: 1rem;
+  z-index: -1;
+  animation: revolve 2s linear infinite;
+  filter: blur(15px);
+}
+
+.revolving-border-red::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  border-radius: 1rem;
+  z-index: -1;
+}
+.revolving-border-gold {
+  position: relative;
+  border-radius: 1rem;
+  z-index: 1;
+}
+ 
+.revolving-border-gold::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(45deg, #ffd700, #ffaa00, #ffd700, #cc8800, #ffd700);
+  background-size: 400% 400%;
+  border-radius: 1rem;
+  z-index: -1;
+  animation: revolve 2s linear infinite;
+  filter: blur(15px);
+}
+ 
+.revolving-border-gold::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  border-radius: 1rem;
+  z-index: -1;
+}
+.revolving-border-cosmic {
+  position: relative;
+  border-radius: 1rem;
+  z-index: 1;
+}
+ 
+.revolving-border-cosmic::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff, #8b00ff, #00ffff, #ff6ec7, #ffd700, #ff00ff);
+  background-size: 400% 400%;
+  border-radius: 1rem;
+  z-index: -1;
+  animation: revolve 2s linear infinite;
+  filter: blur(15px);
+}
+ 
+.revolving-border-cosmic::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  border-radius: 1rem;
+  z-index: -1;
+}
